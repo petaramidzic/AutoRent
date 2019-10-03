@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{797BD606-BFA3-4358-83AC-6B74B560FFD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutoRent</RootNamespace>
+    <AssemblyName>AutoRent</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracija.Designer.cs">
+      <DependentUpon>Administracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdmKupac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmKupac.Designer.cs">
+      <DependentUpon>FrmAdmKupac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdmPonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmPonuda.Designer.cs">
+      <DependentUpon>FrmAdmPonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdmRezervacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmRezervacije.Designer.cs">
+      <DependentUpon>FrmAdmRezervacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdmStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmStatistika.Designer.cs">
+      <DependentUpon>FrmAdmStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAutomobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutomobil.Designer.cs">
+      <DependentUpon>FrmAutomobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKupac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKupac.Designer.cs">
+      <DependentUpon>FrmKupac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPregled_rezervacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPregled_rezervacija.Designer.cs">
+      <DependentUpon>FrmPregled_rezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRezervacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRezervacija.Designer.cs">
+      <DependentUpon>FrmRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\Administrator.cs" />
+    <Compile Include="Klase\Automobil.cs" />
+    <Compile Include="Klase\BrojVrata.cs" />
+    <Compile Include="Klase\Datoteka.cs" />
+    <Compile Include="Klase\Gorivo.cs" />
+    <Compile Include="Klase\Karoserija.cs" />
+    <Compile Include="Klase\Korisnik.cs" />
+    <Compile Include="Klase\Kupac.cs" />
+    <Compile Include="Klase\Menjac.cs" />
+    <Compile Include="Klase\Pogon.cs" />
+    <Compile Include="Klase\Ponuda.cs" />
+    <Compile Include="Klase\Rezervacije.cs" />
+    <Compile Include="Klase\Statistika.cs" />
+    <Compile Include="Klase\Uloga.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administracija.resx">
+      <DependentUpon>Administracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPregled_rezervacija.resx">
+      <DependentUpon>FrmPregled_rezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmKupac.resx">
+      <DependentUpon>FrmAdmKupac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmPonuda.resx">
+      <DependentUpon>FrmAdmPonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmRezervacije.resx">
+      <DependentUpon>FrmAdmRezervacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutomobil.resx">
+      <DependentUpon>FrmAutomobil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKupac.resx">
+      <DependentUpon>FrmKupac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRezervacija.resx">
+      <DependentUpon>FrmRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
